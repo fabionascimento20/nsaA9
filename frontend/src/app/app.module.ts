@@ -29,6 +29,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { RedDirective } from './directives/red.directive';
+import {MatSelectModule} from '@angular/material/select';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from  '@angular/common';
@@ -46,6 +47,7 @@ import { OsFatherDeleteComponent } from './components/nsa/os-father/os-father-de
 import { OsFatherUpdateComponent } from './components/nsa/os-father/os-father-update/os-update.component';
 import { OsFatherCrudComponent } from './views/os-father-crud/os-father-crud.component';
 import { OsFatherReadComponent } from './components/nsa/os-father/os-father-read/os-father-read.component';
+import { OsListComponent } from './components/nsa/tools/os/os-list.component';
 
 registerLocaleData(localePt);
 
@@ -73,7 +75,8 @@ registerLocaleData(localePt);
     OsFatherDeleteComponent,
     OsFatherUpdateComponent,
     OsFatherCrudComponent,
-    OsFatherReadComponent
+    OsFatherReadComponent,
+    OsListComponent
 	
   ],
   imports: [
@@ -93,6 +96,7 @@ registerLocaleData(localePt);
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatSelectModule
   ],
   providers: [{
     provide: LOCALE_ID,

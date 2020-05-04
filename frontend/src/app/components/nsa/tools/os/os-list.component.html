@@ -1,0 +1,24 @@
+<div class="example-container">
+<!-- <div class="btn-group"> -->
+  
+  <mat-form-field appearance="fill">
+    <mat-select placeholder="Selecionar OS Pai" name="ospai" 
+      (selectionChange)="osFatherChangeAction(os_father)" 
+      [(ngModel)]="os_father">
+      
+      <mat-option *ngFor= "let osItem of os" [value] >{{osItem.osNumber}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+      <mat-label>{{osfather_title}}</mat-label>
+    <input matInput name ="osfather_title" [(ngModel)] = "osfather_title" >
+  </mat-form-field>
+  <br>
+</div>
+
+
+
+
+
+
