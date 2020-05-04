@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Preta",
+      "price": 5.89
+    },
+    {
+      "id": 2,
+      "name": "Notebook Mac Pro",
+      "price": 12000.89
+    },
+    {
+      "id": 3,
+      "name": "Sansung S20+ Ultra",
+      "price": "7520.89"
+    },
+    {
+      "name": "Lapis Preto Básico",
+      "price": "1.50",
+      "id": 4
+    },
+    {
+      "name": "TESTE",
+      "price": "1,99",
+      "id": 5
+    }
+  ],
+  "oss": [
+    {
+      "id": 1,
+      "osNumber": "5201",
+      "osDescription": "Sistemas Corporativos"
+    },
+    {
+      "id": 2,
+      "osNumber": "5202",
+      "osDescription": "PCO teste"
+    },
+    {
+      "id": 3,
+      "osNumber": "P3S1",
+      "osDescription": "P3"
+    }
+  ],
+  "workers": [
+    {
+      "id": 1,
+      "idWorker": "1",
+      "fullName": "teste"
+    }
+  ],
+  "ossfather": [
+    {
+      "id": 1,
+      "osNumber": "0001",
+      "osDescription": "Akaer TESTE DE RESPONSIVIDADE.............."
+    },
+    {
+      "id": 2,
+      "osNumber": "0002",
+      "osDescription": "P3 - PROJETO."
+    },
+    {
+      "osDescription": "PROJETO PAI",
+      "osNumber": "TESTE",
+      "id": 3
+    }
+  ]
+}

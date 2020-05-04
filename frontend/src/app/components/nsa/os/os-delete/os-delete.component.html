@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Excluir OS</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição"
+                [value]="os.osDescription" name="OsDescription" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Número OS"
+                [value]="os.osNumber" name="OsNumber" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteOs()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

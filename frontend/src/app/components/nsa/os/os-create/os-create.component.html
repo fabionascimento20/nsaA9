@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Nova OS</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição"
+                [(ngModel)]="os.osDescription" name="osDescription">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Número da OS"
+                [(ngModel)]="os.osNumber" name="osNumber">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createOs()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
