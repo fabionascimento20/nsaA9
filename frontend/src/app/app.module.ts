@@ -20,7 +20,7 @@ import { MatButtonModule } from  '@angular/material/button';
 import { MatSnackBarModule } from  '@angular/material/snack-bar';
 import { HttpClientModule } from  '@angular/common/http';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
@@ -30,6 +30,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { RedDirective } from './directives/red.directive';
 import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import { MatTableDataSource } from '@angular/material/table';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from  '@angular/common';
@@ -48,6 +50,8 @@ import { OsFatherUpdateComponent } from './components/nsa/os-father/os-father-up
 import { OsFatherCrudComponent } from './views/os-father-crud/os-father-crud.component';
 import { OsFatherReadComponent } from './components/nsa/os-father/os-father-read/os-father-read.component';
 import { OsListComponent } from './components/nsa/tools/os/os-list.component';
+import { FabioExampleComponent } from './components/nsa/fabio-example/fabio-example/fabio-example.component';
+import { FabioExampleService } from './components/nsa/fabio-example/fabio-example/services/fabio-example.service';
 
 registerLocaleData(localePt);
 
@@ -76,7 +80,9 @@ registerLocaleData(localePt);
     OsFatherUpdateComponent,
     OsFatherCrudComponent,
     OsFatherReadComponent,
-    OsListComponent
+    OsListComponent,
+    FabioExampleComponent,
+    FabioExampleService
 	
   ],
   imports: [
@@ -96,7 +102,10 @@ registerLocaleData(localePt);
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatTableDataSource
   ],
   providers: [{
     provide: LOCALE_ID,

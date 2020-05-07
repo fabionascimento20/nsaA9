@@ -14,6 +14,7 @@ import { OsFatherDeleteComponent } from './components/nsa/os-father/os-father-de
 import { OsFatherUpdateComponent } from './components/nsa/os-father/os-father-update/os-update.component';
 import { OsFatherCreateComponent } from './components/nsa/os-father/os-father-create/os-father-create.component';
 import { OsFatherCrudComponent } from './views/os-father-crud/os-father-crud.component';
+import { FabioExampleComponent } from './components/nsa/fabio-example/fabio-example/fabio-example.component';
 
 
 const routes: Routes = [
@@ -68,7 +69,12 @@ const routes: Routes = [
   {
     path: "ossfather/delete/:id",
     component: OsFatherDeleteComponent
-  }
+  },
+  {
+    path: "fabio",
+    component: FabioExampleComponent
+  },
+
 ];
 
 @NgModule({

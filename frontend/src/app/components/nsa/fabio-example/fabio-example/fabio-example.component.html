@@ -1,0 +1,65 @@
+<div>
+  <div>
+    <div class="py-2">
+      <button mat-stroked-button color="primary" (click)="addNewItemHandler()">Adicionar</button>
+    </div>
+    <mat-table [dataSource]="dataSource" *ngIf="formGroup">
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let element; let i = index" [formGroup]="getFormGroupByIndex(i)">
+          <mat-form-field class="w-100">
+            <mat-label></mat-label>
+            <input matInput placeholder="Name" formControlName="position">
+          </mat-form-field>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element; let i = index" [formGroup]="getFormGroupByIndex(i)">
+          <mat-form-field class="w-100">
+            <mat-label></mat-label>
+            <input matInput placeholder="Name" formControlName="name">
+          </mat-form-field>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="weight">
+        <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+      </ng-container>
+
+      <!-- Acao Column -->
+      <ng-container matColumnDef="acao">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let element; let i = index" [formGroup]="getFormGroupByIndex(i)">
+          <div class="w-100" fxLayoutGap="5px" fxLayoutAlign="end center">
+            <button mat-mini-fab aria-label="Confirmar" color="primary" *ngIf="getFormGroupByIndex(i).dirty" (click)="confirmButtonHandler(i)">
+              <mat-icon>check</mat-icon>
+            </button>
+            <button mat-stroked-button aria-label="Confirmar" color="primary" *ngIf="getFormGroupByIndex(i).dirty" (click)="cancelButtonHandler(i)">
+              Cancelar
+            </button>
+            <button mat-mini-fab aria-label="Remover" color="accent" *ngIf="!getFormGroupByIndex(i).dirty" (click)="removeButtonHandler(i)">
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </div>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row, let i = index; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  </div>
+  <pre>{{formGroup.value | json}}</pre>
+</div>
